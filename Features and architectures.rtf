@@ -1,0 +1,73 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;\red89\green138\blue67;
+\red193\green193\blue193;\red194\green126\blue101;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\csgray\c0\c0;\cssrgb\c41569\c60000\c33333;
+\cssrgb\c80000\c80000\c80000;\cssrgb\c80784\c56863\c47059;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33100\viewh19080\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 FEATURES\strokec5 \
+\strokec4 1. Feel the frequency\strokec5 \
+\strokec4 A random frequency gets played and the user can input what they are feeling. \strokec5 \
+\strokec4 The reward is a comparison of user feelings and collective feelings for that frequency\strokec5 \
+\strokec4  \strokec5 \
+\strokec4 2. Generate frequency for current mood\strokec5 \
+\strokec4 The user inputs how they feel\strokec5 \
+\strokec4 The reward is a sound that in aligned with their current mood\strokec5 \
+\strokec4  \strokec5 \
+\strokec4 3. Generate emotion\strokec5 \
+\strokec4 The users inputs how they want to feel \strokec5 \
+\strokec4 The reward is a sound that is most likely to make them feel that way\strokec5 \
+\
+\strokec4 4. Frequency/emotion graph\strokec5 \
+\strokec4 The feelings are graphed against the frequencies\strokec5 \
+\strokec4  \
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec4 ARCHITECTURE X.0\strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec6 1. Frontend (User Interface)\strokec5 \
+\strokec6 Tool: Tkinter (Pythons built-in GUI library)\strokec5 \
+\strokec6 Purpose: Displays buttons, input fields, and graphs; plays sounds.\strokec5 \
+\
+\strokec6 Components:\strokec5 \
+\strokec6 Main Window: Buttons for each feature (e.g., \'93Play Random Frequency,\'94 \'93Input Mood\'94).\strokec5 \
+\strokec6 Input Fields: Text boxes for users to enter feelings or desired emotions.\strokec5 \
+\strokec6 Output Area: Shows comparisons (e.g., \'93You felt calm, 60% of users felt the same\'94).\strokec5 \
+\strokec6 Graph Canvas: Displays frequency vs. emotion data\strokec5 \
+\
+\strokec6 2. Backend (Logic and Data)\strokec5 \
+\strokec6 Language: Python\'97handles logic, file I/O, and basic data processing.\strokec5 \
+\
+\strokec6 Components:\strokec5 \
+\strokec6 Frequency Generator: Uses PyDub or NumPy + PyGame to create and play frequencies.\strokec5 \
+\strokec6 Data Storage: A simple CSV file or SQLite database to store user inputs and collective feelings (e.g., frequency, user_feeling, timestamp).\strokec5 \
+\strokec6 Emotion Mapping: A dictionary or basic ML model (later) to link frequencies to emotions (e.g., 432 Hz \uc0\u8594  \'93calm\'94).\strokec5 \
+\strokec6 Comparison Logic: Calculates stats (e.g., % of users feeling X at Y Hz).\strokec5 \
+\
+\strokec6 3. Audio Handling\strokec5 \
+\strokec6 Tool: PyGame (for playback) + NumPy (to generate sine waves for frequencies).\strokec5 \
+\strokec6 Purpose: Plays random or mood-based frequencies through your Mac speakers.\strokec5 \
+\
+\strokec6 4. Data Visualization\strokec5 \
+\strokec6 Tool: Matplotlib\'97Pythons plotting library, integrates with Tkinter.\strokec5 \
+\strokec6 Purpose: Graphs frequencies (x-axis) vs. emotions (y-axis, encoded as numbers or categories).\strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec4 \
+ARCHITECTURE 1.0\strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec6 1. Feel the frequency: a random youtube link is shared with the user, and the user can input feelings seperated by commas, the app then shows what words overlap with previously known words and which did not\strokec5 \
+\strokec6 2. Generate frequency: the user inputs how they feel, the app then give a youtube link that is the best match with that input. \strokec5 \
+\strokec6 3. Generate emotion: the user inputs how they want to feel, the app then gives a youtube link that is the best match with that input (same as 2)\strokec5 \
+\strokec6 4. Frequency/emotion graph: the user input the hertz frequency, the app then gives the most likely emotions that are associated with that frequency\strokec5 \
+\strokec6 ? the matching of frequencies and emotions probably needs to some type of match scoring system\strokec5 \
+\
+\
+}
